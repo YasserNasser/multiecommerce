@@ -24,7 +24,7 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{asset('assets/images/banners/banner3-1.jpg')}}" alt="banner-1" title="banner-1"></a>
+                                            <a href="#"> <img class="img-fluid" src="{{asset('images/banners/banner3-1.jpg')}}" alt="banner-1" title="banner-1"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{asset('assets/images/banners/banner3-2.jpg')}}" alt="banner-2" title="banner-2"></a>
+                                            <a href="#"> <img class="img-fluid" src="{{asset('images/banners/banner3-2.jpg')}}" alt="banner-2" title="banner-2"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{asset('assets/images/banners/banner3-3.jpg')}}" alt="banner-3" title="banner-3"></a>
+                                            <a href="#"> <img class="img-fluid" src="{{asset('images/banners/banner3-3.jpg')}}" alt="banner-3" title="banner-3"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -6462,7 +6462,7 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{asset('assets/images/banners/banner1-9.jpg')}}" alt="banner1-9" title="banner1-9"></a>
+                                            <a href="#"> <img class="img-fluid" src="{{asset('images/banners/banner1-9.jpg')}}" alt="banner1-9" title="banner1-9"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -6475,7 +6475,7 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{asset('assets/images/banners/banner1-10.jpg')}}" alt="banner1-10" title="banner1-10"></a>
+                                            <a href="#"> <img class="img-fluid" src="{{asset('images/banners/banner1-10.jpg')}}" alt="banner1-10" title="banner1-10"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -9284,37 +9284,37 @@
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/4_duis-luctus" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/4-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/4-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/1_lorem-ipsum" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/1-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/1-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/3_morbi-venenatis" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/3-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/3-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/6_nulla-interdum" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/6-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/6-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/5_quisque-egestas" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/5-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/5-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="logo-manu">
                                                     <a href="http://demo.bestprestashoptheme.com/savemart/ar/2_vivamus-aliquet" title="view products">
-                                                        <img class="img-fluid" src="{{asset('assets/images/company/2-manu_default.jpg')}}" alt=""/></a>
+                                                        <img class="img-fluid" src="{{asset('images/company/2-manu_default.jpg')}}" alt=""/></a>
                                                 </div>
                                             </div>
                                         </div>

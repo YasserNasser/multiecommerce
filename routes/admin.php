@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace'=>'Admin','middleware' => 'auth:admin'], function() {
     Route::get('/', 'DashboardController@index') -> name('admin.dashboard');
+    Route::post('/logout', 'LoginController@logout') -> name('admin.logout');
 });
 
 

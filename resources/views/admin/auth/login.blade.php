@@ -13,7 +13,7 @@
                                 <div class="card-header border-0">
                                     <div class="card-title text-center">
                                         <div class="p-1">
-                                            <img src="{{asset('assets/admin/images/logo/logo1.png')}}" alt="LOGO"/>
+                                            <img src="{{asset('admin/images/logo/logo1.png')}}" alt="LOGO"/>
 
                                         </div>
                                     </div>

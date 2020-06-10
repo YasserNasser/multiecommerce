@@ -61,7 +61,7 @@
         <div class="row d-flex align-items-center">
             <div id="_desktop_logo" class="contentsticky_logo d-flex align-items-center justify-content-start col-lg-3 col-md-3">
                 <a href="http://demo.bestprestashoptheme.com/savemart/">
-                    <img class="logo img-fluid" src="{{asset('assets/images/logo-1.png')}}" alt="Prestashop_Savemart">
+                    <img class="logo img-fluid" src="{{asset('images/logo-1.png')}}" alt="Prestashop_Savemart">
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 header-menu d-flex align-items-center justify-content-start">

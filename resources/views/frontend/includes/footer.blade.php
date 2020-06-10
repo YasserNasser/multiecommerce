@@ -301,7 +301,7 @@
           </span>
                 </div>
                 <div class="payment-image col-md-6 align-items-center justify-content-end d-flex flex-center mt-xs-20">
-                    <a href="#"><img class="img-fluid" src="{{asset('assets/images/payment-logo-1.png')}}" alt="payment" title="Payment" /></a>
+                    <a href="#"><img class="img-fluid" src="{{asset('images/payment-logo-1.png')}}" alt="payment" title="Payment" /></a>
                 </div>
             </div>
         </div>

@@ -143,22 +143,22 @@
         <div id="box-language" class="box-content d-flex">
             <div class="w-100">
                 <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/en/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/1.jpg')}}" alt="English (English)" width="16" height="11" /><span>English</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/en/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/1.jpg')}}" alt="English (English)" width="16" height="11" /><span>English</span></a>
                 </div>
                 <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/fr/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/2.jpg')}}" alt="Français (French)" width="16" height="11" /><span>Français</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/fr/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/2.jpg')}}" alt="Français (French)" width="16" height="11" /><span>Français</span></a>
                 </div>
                 <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/es/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/3.jpg')}}" alt="Español (Spanish)" width="16" height="11" /><span>Español</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/es/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/3.jpg')}}" alt="Español (Spanish)" width="16" height="11" /><span>Español</span></a>
                 </div>
                 <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/it/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/4.jpg')}}" alt="Italiano (Italian)" width="16" height="11" /><span>Italiano</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/it/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/4.jpg')}}" alt="Italiano (Italian)" width="16" height="11" /><span>Italiano</span></a>
                 </div>
                 <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/pl/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/5.jpg')}}" alt="Polski (Polish)" width="16" height="11" /><span>Polski</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/pl/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/5.jpg')}}" alt="Polski (Polish)" width="16" height="11" /><span>Polski</span></a>
                 </div>
                 <div class="item-language current">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/ar/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/images/lan/6.jpg')}}" alt="اللغة العربية (Arabic)" width="16" height="11" /><span>اللغة العربية</span></a>
+                    <a href="http://demo.bestprestashoptheme.com/savemart/ar/" class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('images/lan/6.jpg')}}" alt="اللغة العربية (Arabic)" width="16" height="11" /><span>اللغة العربية</span></a>
                 </div>
             </div>
         </div>

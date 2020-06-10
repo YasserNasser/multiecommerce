@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -23,5 +24,13 @@ class LoginController extends Controller
         // notify()->error('خطا في البيانات  برجاء المجاولة مجدا ');
         return redirect()->back()->with(['error' => 'هناك خطا بالبيانات']);
 
+    }
+    public function logout()
+    {
+
+//        $user = auth()->user();
+//        if($user)
+        Auth::guard('admin')->logout();
+        return redirect() -> route('admin.login');
     }
 }

@@ -30,7 +30,7 @@
 
 
 
-    {{--<link rel="stylesheet" href="http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/assets/cache/theme-4527f124.css" type="text/css" media="all">--}}
+    {{--<link rel="stylesheet" href="http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/cache/theme-4527f124.css" type="text/css" media="all">--}}
 
 
 
@@ -144,7 +144,7 @@
 
 
     <style type="text/css">
-        #main-site {background-color: #ffffff;}@media (min-width: 1200px) {.container {width: 1200px;}#header .container {width: 1200px;}.footer .container {width: 1200px;}#index .container {width: 1200px;}}#popup-subscribe .modal-dialog .modal-content {background-image: url({{asset('assets/images/newsletter_bg-1.png')}});}
+        #main-site {background-color: #ffffff;}@media (min-width: 1200px) {.container {width: 1200px;}#header .container {width: 1200px;}.footer .container {width: 1200px;}#index .container {width: 1200px;}}#popup-subscribe .modal-dialog .modal-content {background-image: url({{asset('images/newsletter_bg-1.png')}});}
     </style>
 
 </head>
