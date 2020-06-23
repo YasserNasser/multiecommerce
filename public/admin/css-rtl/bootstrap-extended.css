@@ -719,7 +719,7 @@ select.form-control {
 
 .dropdown-toggle::after {
   font-size : 0.8rem;
-  font-family : 'LineAwesome';
+  font-family : 'Cairo';
   content : '\f110' !important;
   border : none !important;
   position : relative;
@@ -772,7 +772,7 @@ select.form-control {
   left : 100%;
 }
 .dropdown-menu .dropdown-submenu > a:after, .dropdown-menu .dropdown-submenu > button:after {
-  font-family : 'LineAwesome';
+  font-family : 'Cairo';
   content : '\f112' !important;
   left : 15px;
   font-size : 1rem;
@@ -963,7 +963,7 @@ select.form-control {
 .header-navbar {
   padding : 0;
   min-height : 5rem;
-  font-family : 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-family : 'Cairo', sans-serif;
   -webkit-transition : 300ms ease all;
      -moz-transition : 300ms ease all;
        -o-transition : 300ms ease all;
@@ -1752,7 +1752,8 @@ select.form-control {
 
 .breadcrumb {
   font-size : 1rem;
-  font-family : 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  /* font-family : 'Cairo', sans-serif; */
+  font-family : 'Cairo', sans-serif;
   background-color : transparent;
   padding : 0 0rem 0.75rem 0;
 }

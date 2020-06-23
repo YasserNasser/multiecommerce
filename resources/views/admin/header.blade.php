@@ -30,9 +30,9 @@
                 <ul class="nav navbar-nav float-right">
                     <li class="dropdown dropdown-user nav-item">
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                <span class="mr-1">مرجبا
+                <span class="mr-1">مرحبا
                   <span
-                          class="user-name text-bold-700">  Ahmed Emam</span>
+                          class="user-name text-bold-700">  {{Auth()->user()->name}}</span>
                 </span>
                             <span class="avatar avatar-online">
                   <img  style="height: 35px;" src="{{asset('admin/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><i></i></span>

@@ -24,21 +24,22 @@ class LanguageRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' =>'required|string|max:100',
-            'abbr' =>'required|string|max:10',
+            'name' => 'required|string|max:100',
+            'abbr' => 'required|string|max:10',
             //'active' =>'required|in:0,1',
-            'direction' =>'required|in:rtl,ltr',
+            'direction' => 'required|in:rtl,ltr',
 
         ];
     }
-    public function messages(){
+    public function messages()
+    {
         return [
-            'required' =>'هذا الحقل مطلوب',
-            'name.string' =>'اسم اللغة يجب ان يكون أحرف',
-            'abbr.string' =>'إختصار اللغة يجب ان يكون أحرف',
-            'name.max' =>'اسم اللغة يجب ان يكون اقل من 100 حرف',
-            'abbr.max' =>'إختصار اللغة يجب ان يكون اقل من 10 حرف',
-            'in' =>'القيم المدخلة غير صحيحة',
+            'required' => 'هذا الحقل مطلوب',
+            'name.string' => 'اسم اللغة يجب ان يكون أحرف',
+            'abbr.string' => 'إختصار اللغة يجب ان يكون أحرف',
+            'name.max' => 'اسم اللغة يجب ان يكون اقل من 100 حرف',
+            'abbr.max' => 'إختصار اللغة يجب ان يكون اقل من 10 حرف',
+            'in' => 'القيم المدخلة غير صحيحة',
 
         ];
     }

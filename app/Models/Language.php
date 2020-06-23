@@ -8,18 +8,24 @@ class Language extends Model
 {
     protected $table = 'languages';
     protected $fillable = [
-        'name', 'abbr', 'locale','direction','active'
+        'name', 'abbr', 'locale', 'direction', 'active'
     ];
 
-    public function scopeActive($query){
-        return $query->where('active',1);
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
     }
-    public function getActive(){
-        return   $this -> active == 1 ? 'مفعل'  : 'غير مفعل';
-      }
-    public function getDirection(){
-        return   $this -> direction == 'ltr' ? 'من اليسار لليمين'  : 'من اليمين لليسار';
-      }
-  
+    public function getActive()
+    {
+        return   $this->active == 1 ? 'مفعل'  : 'غير مفعل';
+    }
+    public function getDirection()
+    {
+        return   $this->direction == 'ltr' ? 'من اليسار لليمين'  : 'من اليمين لليسار';
+    }
+    public function scopeSelection($query)
+    {
+        return   $query->select('id','abbr','name','direction','active');
+    }
 
 }

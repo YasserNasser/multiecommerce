@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "php-cs-fixer.executable": "C:\\Users\\MobiTurk\\AppData\\Roaming\\Composer\\vendor\\bin\\php-cs-fixer.bat"
 }

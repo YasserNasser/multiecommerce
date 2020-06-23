@@ -23,8 +23,8 @@
                                 </div>
 
                                 <!-- begin alet section-->
-                            @include('admin.includes.alert.error')
-                            @include('admin.includes.alert.success')
+                            @include('admin.includes.alerts.errors')
+                            @include('admin.includes.alerts.success')
                                 <!-- end alet section-->
 
                                 <div class="card-content">
