@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\VendorRequest;
 use App\Models\MainCategory;
 use App\Models\Vendor;
+use App\Notifications\VendorCreated;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class VendorsController extends Controller
 {
@@ -34,17 +36,19 @@ class VendorsController extends Controller
               }
             DB::beginTransaction();
           
-              $vendor[] = [
+              $vendor =Vendor::create([
                 'name' => $request['name'],
                 'category_id' => $request['category_id'],
                 'email' => $request['email'],
                 'mobile' => $request['mobile'],
                 'active' => $request['active'],
+                'address' => $request['address'],
                 'photo' => $filePath,
-              ];
+              ]);
             
-          Vendor::insert($vendor);
+          //Vendor::insert($vendor);
           DB::commit();
+          Notification::send($vendor, new VendorCreated($vendor));
           return redirect()->route('admin.vendors')->with(['success' => 'تم حفظ المتجر بنجاح']);
         } catch (\Exception $ex) {
           DB::rollBack();

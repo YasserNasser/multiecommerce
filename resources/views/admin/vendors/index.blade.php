@@ -50,6 +50,7 @@
                                                 <th> الاسم</th>
                                                 <th>صورة المتجر</th>
                                                 <th>الهاتف</th>
+                                                <th>العنوان</th>
                                                 <th>الحالة</th>
                                                 <th>القسم الرئيسي</th>
                                                 <th>الإجراءات</th>
@@ -62,6 +63,7 @@
                                                         <td>{{$vendor -> name}}</td>
                                                         <td> <img src="{{$vendor -> photo}}" style="width: 75px"></td>
                                                         <td>{{$vendor -> mobile}}</td>
+                                                        <td>{{$vendor -> address}}</td>
                                                         <td>{{$vendor -> getActive()}}</td>
                                                         <td>{{$vendor -> category->name}}</td>
                                                         <td>
