@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Vendor;
 use Illuminate\Database\Eloquent\Model;
 
 class MainCategory extends Model
@@ -27,5 +27,8 @@ class MainCategory extends Model
     //get all translation for specific category in the same table 'main{category'
     public function categories(){
         return $this->hasMany(self::class,'translation_of','id');
+    }
+    public function vendors(){
+        return $this->hasMany(Vendor::class,'translation_of','id');
     }
 }
