@@ -10,10 +10,10 @@ class Vendor extends Model
     use Notifiable;
     protected $table = 'vendors';
     protected $fillable = [
-        'name', 'email', 'mobile','address','photo','active','category_id','created_at','updated_at'
+        'name', 'email', 'mobile','address','photo','password','active','category_id','created_at','updated_at'
     ];
 
-    protected $hidden = ['category_id'];
+    protected $hidden = ['category_id','password'];
 
     public function scopeActive($query){
         return $query->where('active',1);
@@ -33,5 +33,8 @@ class Vendor extends Model
     }
     public function category(){
         return $this->belongsTo(MainCategory::class,'category_id','id');
+    }
+    public function setPasswordAttribute($password){
+        return $this->attributes['password'] = bcrypt($password);
     }
 }

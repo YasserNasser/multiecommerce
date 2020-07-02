@@ -35,11 +35,12 @@ class VendorsController extends Controller
                 $request->request->add(['active' => '1']);
               }
             DB::beginTransaction();
-          
+          // the bycrypt is done by accessor function in the model OR we can do it directly in the creation : 'password' => bcrypt($request['password'])
               $vendor =Vendor::create([
                 'name' => $request['name'],
                 'category_id' => $request['category_id'],
                 'email' => $request['email'],
+                'password' => $request['password'],
                 'mobile' => $request['mobile'],
                 'active' => $request['active'],
                 'address' => $request['address'],
@@ -57,13 +58,43 @@ class VendorsController extends Controller
 
     }
     public function edit($vendor_id){
-        $vendor = Vendor::selection()->find($vendor_id);
-           if(!$vendor)
-              return redirect()->route('admin.vendors')->with(['erroe' => 'هذا المتجر غير موجود']);
-              $categories = MainCategory::active()->where('translation_of',0)->get();
-        return view('admin.vendors.edit', compact(['vendor','categories']));
+          try {
+            $vendor = Vendor::selection()->find($vendor_id);
+              if(!$vendor)
+                  return redirect()->route('admin.vendors')->with(['erroe' => '  هذا المتجر غير موجود أو ربما يكون محذوف']);
+             $categories = MainCategory::active()->where('translation_of',0)->get();
+            return view('admin.vendors.edit', compact(['vendor','categories']));
+          } catch (\Exception $ex) {
+            
+            return redirect()->route('admin.vendors')->with(['erroe' => 'هناك خطأ ما حدث حاول مجددا']);
+             }
       }
-    public function update(){
+    public function update( VendorRequest $request,$vendor_id){
+
+      try {
+        $vendor = Vendor::selection()->find($vendor_id);
+          if(!$vendor)
+              return redirect()->route('admin.vendors')->with(['erroe' => '  هذا المتجر غير موجود أو ربما يكون محذوف']);
+       
+       $data = $request->except('_token','id','photo','password');
+        if ($request->has('photo')) {
+          $filePath = uploadImage('vendors', $request->photo);
+          
+            $data['photo'] = $filePath;
+        }
+        if ($request->has('password')) {
+        
+            $data['password'] = $request->password;
+        }
+        DB::beginTransaction();
+         Vendor::where('id',$vendor_id)->update($data);
+        DB::commit();
+        return redirect()->route('admin.vendors')->with(['success' => 'تم تحديث المتجر بنجاح']);
+      
+      } catch (\Exception $ex) {
+        DB::rollBack();
+        return redirect()->route('admin.vendors')->with(['erroe' => 'هناك خطأ ما حدث حاول مجددا']);
+         }
 
     }
     public function changeStatus($vendor_id){

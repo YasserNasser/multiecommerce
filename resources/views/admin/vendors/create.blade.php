@@ -132,7 +132,18 @@
                                             {{-- @endforeach
                                             @endif --}}
                                             <div class="row">
-
+                                                <div class="col-md-6 ">
+                                                    <div class="form-group">
+                                                        <label for="projectinput1">  كلمة السر </label>
+                                                    <input type="password"  id="password"
+                                                               class="form-control"
+                                                               placeholder="ادخل كلمة السر  "
+                                                               name="password">
+                                                               @error("password")
+                                                               <span class="text-danger">{{$message}} </span>
+                                                               @enderror
+                                                     </div>
+                                                </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group mt-1">
                                                         <input type="checkbox"  value="1" name="active"
@@ -149,7 +160,7 @@
                                                 
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6 ">
+                                                <div class="col-md-12 ">
                                                     <div class="form-group">
                                                         <label for="projectinput1">  العنوان </label>
                                                     <input type="text"  id="place-input"
