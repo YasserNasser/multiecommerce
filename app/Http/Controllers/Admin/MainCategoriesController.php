@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use App\Http\Requests\MainCategoryRequest;
 use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Stmt\TryCatch;
+use Illuminate\Support\Str;
 
 class MainCategoriesController extends Controller
 {
@@ -125,4 +125,51 @@ class MainCategoriesController extends Controller
               //throw $th;
             }
           }
+
+         public function destroy($id){
+           
+           try {
+             $maincategory =  MainCategory::find($id);
+             if(!$maincategory)
+             return redirect()->route('admin.maincategories')->with(['erroe' => 'هذا القسم غير موجود']);
+             
+             $vendors = $maincategory->vendors();
+             if(isset($vendors) && $vendors->count() > 0) {
+               return redirect()->route('admin.maincategories')->with(['error' => 'لا يمكنك حذف هذا القسم']);
+              }
+              $image = Str::after($maincategory->photo,'storage/');
+              $image = 'storage/' . $image;
+             // return $image;
+            unlink($image);
+            $maincategory->delete();
+            return redirect()->route('admin.maincategories')->with(['success' => 'تم حذف القسم بنجاح']);
+            
+          } catch (\Exception $ex) {
+            //return $ex;
+            return redirect()->route('admin.maincategories')->with(['error' => 'هناك خطأ ما حدث حاول مجددا']);
+
+          }
+
+         }
+         
+         public function changeStatus($id){
+
+          try {
+            $maincategory =  MainCategory::find($id);
+            if(!$maincategory)
+            return redirect()->route('admin.maincategories')->with(['erroe' => 'هذا القسم غير موجود']);
+            
+            $status =  $maincategory -> active  == 0 ? 1 : 0;
+
+            $maincategory -> update(['active' =>$status ]);
+           return redirect()->route('admin.maincategories')->with(['success' => 'تم تعديل الحالة بنجاح']);
+           
+         } catch (\Exception $ex) {
+           //return $ex;
+           return redirect()->route('admin.maincategories')->with(['error' => 'هناك خطأ ما حدث حاول مجددا']);
+
+         }
+
+         }
+
 }

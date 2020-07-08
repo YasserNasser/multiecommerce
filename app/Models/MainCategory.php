@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\Vendor;
+use App\Observers\MainCategoryObserver;
 use Illuminate\Database\Eloquent\Model;
 
 class MainCategory extends Model
@@ -11,11 +12,16 @@ class MainCategory extends Model
         'name', 'translation_lang', 'translation_of','slug','photo','active'
     ];
 
+    protected static function boot(){
+        parent::boot();
+        MainCategory::observe(MainCategoryObserver::class);
+    }
+
     public function scopeActive($query){
         return $query->where('active',1);
     }
     public function scopeSelection($query){
-        return $query->select('id','translation_lang','name','slug','photo','active');
+        return $query->select('id','translation_lang','translation_of','name','slug','photo','active');
     }
     public function getPhotoAttribute($val){
         return $val !== null ? asset('storage/'.$val) : "" ;
@@ -29,6 +35,6 @@ class MainCategory extends Model
         return $this->hasMany(self::class,'translation_of','id');
     }
     public function vendors(){
-        return $this->hasMany(Vendor::class,'translation_of','id');
+        return $this->hasMany(Vendor::class,'category_id','id');
     }
 }

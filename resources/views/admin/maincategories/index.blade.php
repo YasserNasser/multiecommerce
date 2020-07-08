@@ -71,8 +71,8 @@
 
                                                                 <a href="{{route('admin.maincategories.delete',$category -> id)}}"
                                                                    class="btn btn-outline-danger  box-shadow-3 mr-1 mb-1">حذف</a>
-                                                                <a href="{{route('admin.maincategories.delete',$category -> id)}}"
-                                                                   class="btn btn-outline-warning  box-shadow-3 mr-1 mb-1">تفعيل</a>
+                                                                <a href="{{route('admin.maincategories.changeStatus',$category -> id)}}"
+                                                                   class="btn btn-outline-warning  box-shadow-3 mr-1 mb-1">{{($category->active == 1) ? 'إلغاء تفعيل' : 'تفعيل'}}</a>
 
 
                                                             </div>
